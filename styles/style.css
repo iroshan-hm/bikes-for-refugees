@@ -61,21 +61,51 @@ p {
 /* Navigation */
 
 .navigation__list {
-  display: flex;
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
 }
 
 .navigation__item {
-  padding: 0.5rem 0;
+  /* Optional: add spacing or styling to items */
 }
 
 .navigation__link {
-  color: var(--grey-dark);
-  font-weight: 600;
-  text-transform: uppercase;
   text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 4px;
 }
 
+.navigation__link:hover,
+.navigation__link:focus {
+  background: #f4b942;
+  color: #fff;
+}
+
+/* Add or update this CSS for the Donate Now button */
+.header > button {
+  background-color: #bf5426;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.header > button:hover,
+.header > button:focus {
+  background-color: #a13e1a;
+}
 
 /* Text styles */
 
@@ -120,20 +150,71 @@ p {
 /* hero */
 
 .hero {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  border-radius: 6px;
   background-image: url("header-bike.jpg");
   background-color: var(--grey-light);
 }
 
-.hero h1 {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
+.hero__image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
 }
 
-.hero p {
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 50px;
+  color: #fff;
+  background: rgba(0,0,0,0.2); /* subtle overlay for readability */
+}
+
+.hero__title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.7rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.hero__subtitle {
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }
 
+.hero__button {
+  font-size: 1rem;
+  padding: 0.5em 1.3em;
+  margin-right: 0.7em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.hero__button--primary {
+  background: #b35427;
+  color: #fff;
+}
+
+.hero__button--secondary {
+  background: #fff;
+  color: #b35427;
+  /* border: 2px solid #b35427; */
+}
 
 /* Headings */
 
